@@ -18,3 +18,19 @@ header {
     margin: 0px;
     position: relative;
 }
+
+/* location */
+
+main .location {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    background-color: rgb(245, 241, 241);
+    position: relative;
+}
+
+main .location i {
+    font-size: 20px;
+}
+
