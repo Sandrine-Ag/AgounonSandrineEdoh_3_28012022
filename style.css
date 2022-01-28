@@ -26,11 +26,36 @@ main .location {
     align-items: center;
     gap: 16px;
     justify-content: center;
-    background-color: rgb(245, 241, 241);
-    position: relative;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 6px;
 }
 
 main .location i {
     font-size: 20px;
 }
 
+/* intro */
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.intro p {
+    font-size: 16px;
+}
+
+.intro button {
+    background-image: linear-gradient(#ff79da, #9356dc);
+    border-radius: 30px;
+    padding: 16px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    box-shadow: 2px 1px 16px -2px black ;
+}
