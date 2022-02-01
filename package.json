@@ -1,0 +1,22 @@
+{
+  "name": "p3_agounon_sandrineedoh",
+  "version": "1.0.0",
+  "description": "projet3 OC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandrine-Ag/AgounonSandrineEdoh_3_28012022.git"
+  },
+  "author": "AgounonSandrine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sandrine-Ag/AgounonSandrineEdoh_3_28012022/issues"
+  },
+  "homepage": "https://github.com/Sandrine-Ag/AgounonSandrineEdoh_3_28012022#readme",
+  "devDependencies": {
+    "sass": "^1.49.4"
+  }
+}
