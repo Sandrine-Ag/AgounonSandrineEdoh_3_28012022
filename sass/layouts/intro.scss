@@ -1,0 +1,25 @@
+@import "../utils/shadow.scss";
+.intro {
+    text-align: center;
+    & h2 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    & p {
+        font-size: 16px;
+    }
+    & button {
+        background-image:linear-gradient(#ff79da, #9356dc);
+        border-radius: 30px;
+        padding: 16px;
+        color: white;
+        border: none;
+        font-size: 16px;
+        @include shadow;
+    }
+
+    & button:hover {
+        transform: scale(1.01);
+        opacity: 0.9;
+    }
+}

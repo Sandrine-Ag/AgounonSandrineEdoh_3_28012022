@@ -1,0 +1,46 @@
+@import "../utils/hovering.scss";
+@import "../utils/colors.scss";
+.functionality {
+    counter-reset: numbers;
+    .purple {
+        color: $primary-color;
+    }
+    & h2 {
+        margin: 16px;
+    }
+    & ol {
+        display: flex;
+        margin: 10px;
+        gap: 20px;
+        @media (max-width: 987px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        &::before {
+            content:counter(numbers);
+            counter-increment: numbers;
+            color: white;
+            background-color: $primary-color;
+            padding: 5px;
+            margin: -12px;
+            border-radius: 50%;
+            font-size: smaller;
+        }
+        list-style-type: none;
+        background-color: $tertiary-color;
+        padding: 20px 5px;
+        border: 1px solid $secondary-color;
+        flex-grow: 1;
+        border-radius: 20px;
+        font-weight: bold;
+        @include shadow;
+            &:hover{
+                @include hovering;
+            }
+            & i .fa, .fas {
+                margin-right: 30px;
+                margin-left: 20px;
+            }
+    }
+}
