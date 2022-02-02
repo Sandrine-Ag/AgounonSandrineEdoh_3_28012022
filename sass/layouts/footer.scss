@@ -1,0 +1,22 @@
+footer {
+    padding: 16px;
+    background-color: #2b2a2a;
+    color: white;
+    h2 {
+    font-family: "Shrikhand", cursive;
+    }
+    h3 {
+        font-weight: normal;
+    }
+    & .proposal {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: 0px;
+    }
+    & .partner {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+    }
+}

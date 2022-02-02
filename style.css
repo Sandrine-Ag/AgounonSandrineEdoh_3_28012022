@@ -9,6 +9,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+p, h3 {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   text-align: center;
   font-family: "Shrikhand", cursive;
@@ -48,7 +58,7 @@ header {
   color: white;
   border: none;
   font-size: 16px;
-  box-shadow: 2px 1px 1px -2px #f6f6f6;
+  box-shadow: 4px 4px 10px -4px black;
 }
 .intro button:hover {
   transform: scale(1.01);
@@ -68,6 +78,7 @@ header {
   display: flex;
   margin: 10px;
   gap: 20px;
+  padding: 10px;
 }
 @media (max-width: 987px) {
   .functionality ol {
@@ -82,7 +93,7 @@ header {
   flex-grow: 1;
   border-radius: 20px;
   font-weight: bold;
-  box-shadow: 2px 1px 1px -2px #f6f6f6;
+  box-shadow: 4px 4px 10px -4px black;
 }
 .functionality li::before {
   content: counter(numbers);
@@ -100,6 +111,89 @@ header {
 .functionality li i .fa, .functionality li .fas {
   margin-right: 30px;
   margin-left: 20px;
+}
+
+.restau {
+  background-color: #f6f6f6;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.restau h2 {
+  margin-left: 16px;
+}
+.restau .menu_choice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+.restau .menu_choice .tag {
+  position: relative;
+}
+.restau .menu_choice .tag::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 20px;
+  width: 90px;
+  font-weight: bold;
+  color: #4acbab;
+  background-color: #99e2d0;
+  padding: 6px;
+  text-align: center;
+  right: 10px;
+  top: 10px;
+}
+.restau .choice {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px -4px black;
+  background-color: white;
+}
+.restau .choice__image {
+  width: 310px;
+}
+.restau .choice__image img {
+  height: 200px;
+  width: 309px;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+.restau .choice__details {
+  position: relative;
+}
+.restau .choice__details i {
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.restau .choice__details .mixed {
+  color: #9356dc;
+}
+
+footer {
+  padding: 16px;
+  background-color: #2b2a2a;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+}
+footer h3 {
+  font-weight: normal;
+}
+footer .proposal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 0px;
+}
+footer .partner {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

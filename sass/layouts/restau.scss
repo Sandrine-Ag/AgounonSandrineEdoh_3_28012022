@@ -1,0 +1,63 @@
+@import "../utils/colors.scss";
+
+
+.restau {
+    h2 {
+        margin-left: 16px;
+    }
+    background-color: #f6f6f6;
+    margin-top: 50px;
+    padding-top: 50px;
+        .menu_choice {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            margin: 10px;
+            padding-bottom: 20px;
+                .tag {
+                    position: relative;
+                }
+                .tag::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    height: 20px;
+                    width: 90px;
+                    font-weight: bold;
+                    color: darken($color: $final-color, $amount: 20%);
+                    background-color: $final-color;
+                    padding: 6px;
+                    text-align: center;
+                    right: 10px;
+                    top: 10px;
+                }
+        }
+        .choice {
+            border: 1px solid #f3f3f3;
+            border-radius: 5px;
+            @include shadow;
+            background-color: white;
+            &__image {
+                width: 310px;
+            }
+            &__image img {
+                height: 200px;
+                width: 309px;
+                background-color: white;
+                border-radius: 5px 5px 0px 0px;
+            }
+            &__details {
+                position: relative;
+                i {
+                    font-size: 25px;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                }
+                .mixed {
+                    color: $primary-color;
+                }
+            }
+        }
+            
+}
