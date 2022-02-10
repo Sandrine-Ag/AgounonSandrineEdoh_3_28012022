@@ -5,4 +5,16 @@ header {
     padding: 5px;
     margin: 0px;
     position: relative;
+    i::before {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        font-family: 'FontAwesome';
+        font-size:larger ;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
 }
+

@@ -4,19 +4,35 @@
   box-sizing: border-box;
 }
 
-body {
+#bloc-page {
   margin: 0px;
   font-family: "Roboto", sans-serif;
 }
-
-p, h3 {
+#bloc-page p, #bloc-page h3, #bloc-page h4 {
   margin: 5px;
   margin-left: 15px;
 }
-
-a {
+#bloc-page footer p {
+  margin: 5px;
+}
+#bloc-page a {
   text-decoration: none;
   color: black;
+}
+#bloc-page footer a {
+  color: white;
+}
+
+#bloc-pages {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+#bloc-pages footer a {
+  text-decoration: none;
+  color: white;
+}
+#bloc-pages footer p {
+  margin: 5px;
 }
 
 header {
@@ -26,6 +42,17 @@ header {
   padding: 5px;
   margin: 0px;
   position: relative;
+}
+header i::before {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-family: "FontAwesome";
+  font-size: larger;
+}
+header a {
+  text-decoration: none;
+  color: black;
 }
 
 .location {
@@ -63,6 +90,7 @@ header {
 .intro button:hover {
   transform: scale(1.01);
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .functionality {
@@ -216,22 +244,23 @@ footer a {
 .picture img {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   object-fit: cover;
   object-position: center bottom;
 }
 
 .service {
+  border-radius: 40px 40px 0px 0px;
   margin-top: -40px;
   position: relative;
   background-color: #f3f3f3;
-  border-radius: 30px 30px 0px 0px;
 }
 .service h2 {
   margin: 0px;
   font-family: "Shrikhand", cursive;
   padding: 30px 16px;
-  border-radius: 0px 0px 16px 19px;
+  border-radius: 40px 40px 0px 0px;
+  background-color: #f3f3f3;
 }
 .service h2 i {
   font-size: 25px;
@@ -254,9 +283,11 @@ footer a {
 .cards {
   background-color: #f3f3f3;
   display: flex;
-  margin: 10px;
   gap: 20px;
   padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media (max-width: 987px) {
   .cards {
@@ -264,16 +295,104 @@ footer a {
   }
 }
 .cards > * {
-  border: 1px solid red;
   flex-grow: 1;
+}
+.cards > * h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.cards > * h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 45px;
+  background-color: #99e2d0;
+  top: 22px;
+  left: 0px;
 }
 .cards .menu__card {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  margin-bottom: 20px;
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 4px 4px 10px -4px black;
+}
+.cards .menu__card .division {
+  margin-left: 15px;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cards .menu__card .division h4, .cards .menu__card .division p {
+  margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: -10px;
+}
+.cards .menu__card .menu-price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  font-weight: 500;
+  padding: 10px;
+}
+.cards .menu__card .menu-tag {
+  padding: 20px;
+  background-color: #99e2d0;
+  margin-right: -60px;
+  border-radius: 0px 10px 10px 0px;
+  transition: margin-right 0.4s;
+}
+.cards .menu__card .menu-tag i {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: #99e2d0;
+  width: 19px;
+  border-radius: 8px;
+}
+.cards .menu__card:hover {
+  cursor: pointer;
+}
+.cards .menu__card:hover .menu-tag {
+  margin-right: 0px;
+}
+.cards .menu__card:hover i {
+  animation: turner 0.4s ease-in-out;
+}
+@keyframes turner {
+  0% {
+    transform: rotate(-190deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+section.ordering {
+  height: 25vh;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 40px;
+}
+section.ordering button {
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border-radius: 30px;
+  padding: 16px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  box-shadow: 4px 4px 10px -4px black;
+}
+section.ordering button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

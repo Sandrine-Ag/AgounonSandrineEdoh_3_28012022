@@ -1,4 +1,6 @@
 @import "../utils/shadow.scss";
+@import "../utils/mixins.scss";
+
 .intro {
     text-align: center;
     & h2 {
@@ -9,17 +11,11 @@
         font-size: 16px;
     }
     & button {
-        background-image:linear-gradient(#ff79da, #9356dc);
-        border-radius: 30px;
-        padding: 16px;
-        color: white;
-        border: none;
-        font-size: 16px;
-        @include shadow;
+       @include button;
+        
     }
 
     & button:hover {
-        transform: scale(1.01);
-        opacity: 0.9;
+        @include button-hover;
     }
 }

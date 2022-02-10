@@ -1,0 +1,43 @@
+@mixin button {
+    background-image:linear-gradient(#ff79da, #9356dc);
+    border-radius: 30px;
+    padding: 16px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    @include shadow;
+}
+
+@mixin button-hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+    cursor: pointer;
+    
+}
+
+@mixin base-footer {
+    padding: 16px;
+    background-color: #2b2a2a;
+    color: white;
+    h2 {
+    font-family: "Shrikhand", cursive;
+    }
+    h3 {
+        font-weight: normal;
+    }
+    & .proposal {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: 0px;
+    }
+    & .partner {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

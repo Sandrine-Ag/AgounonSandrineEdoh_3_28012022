@@ -1,0 +1,10 @@
+@mixin turner {
+    @keyframes turner {
+        0% {
+        transform: rotate(-190deg);
+        }
+        100% {
+        transform: rotate(0);
+        }
+    }
+}

@@ -5,17 +5,41 @@
     box-sizing: border-box;
 }
 
-body {
+#bloc-page {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+
+    p, h3, h4 {
+        margin: 5px;
+        margin-left: 15px;
+    }  
+    footer p {
+        margin: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    footer a {
+        color: white;
+    }
+
+    
 }
 
-p, h3 {
-    margin: 5px;
-    margin-left: 15px;
+#bloc-pages {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+    footer p {
+            margin: 5px;
+    }
+    
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
+
