@@ -1,7 +1,9 @@
+@import "../utils/colors.scss";
+
 header {
     text-align: center;
     font-family: 'Shrikhand', cursive;
-    box-shadow: 0px 2px 2px 1px gray;
+    box-shadow: 0px 4px 1px -2px gray;
     padding: 5px;
     margin: 0px;
     position: relative;

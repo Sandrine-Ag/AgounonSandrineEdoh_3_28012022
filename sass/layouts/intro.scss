@@ -1,10 +1,14 @@
 @import "../utils/shadow.scss";
 @import "../utils/mixins.scss";
+@import "../utils/colors.scss";
+
 
 .intro {
     text-align: center;
+    background-color: #f6f6f6;
+    padding: 40px;
     & h2 {
-        margin-top: 20px;
+        margin-top: 0px;
         font-size: 20px;
     }
     & p {
@@ -19,3 +23,47 @@
         @include button-hover;
     }
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    background-color: powderblue;
+    opacity: 0.9;
+    animation: load 1s 2s forwards;
+}
+
+.full-full {
+    display: flex;
+    align-items: center;
+}
+.loader::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 10px solid #f3f3f3;
+        border-top-color:pink ;
+        border-bottom-color: purple;
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+ }
+
+    @keyframes spin {
+        to {
+            transform: rotate(1turn);
+        }
+    } 
+
+  
+
+@keyframes load {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+} 

@@ -5,7 +5,7 @@
 }
 
 #bloc-page {
-  margin: 0px;
+  margin: 20px;
   font-family: "Roboto", sans-serif;
 }
 #bloc-page p, #bloc-page h3, #bloc-page h4 {
@@ -38,7 +38,7 @@
 header {
   text-align: center;
   font-family: "Shrikhand", cursive;
-  box-shadow: 0px 2px 2px 1px gray;
+  box-shadow: 0px 4px 1px -2px gray;
   padding: 5px;
   margin: 0px;
   position: relative;
@@ -70,9 +70,11 @@ header a {
 
 .intro {
   text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px;
 }
 .intro h2 {
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 20px;
 }
 .intro p {
@@ -93,6 +95,47 @@ header a {
   cursor: pointer;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  background-color: powderblue;
+  opacity: 0.9;
+  animation: load 1s 2s forwards;
+}
+
+.full-full {
+  display: flex;
+  align-items: center;
+}
+
+.loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 10px solid #f3f3f3;
+  border-top-color: pink;
+  border-bottom-color: purple;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes load {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .functionality {
   counter-reset: numbers;
 }
@@ -134,7 +177,7 @@ header a {
   font-size: smaller;
 }
 .functionality li:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 .functionality li i .fa, .functionality li .fas {
   margin-right: 30px;
@@ -144,27 +187,18 @@ header a {
 .restau {
   background-color: #f6f6f6;
   margin-top: 50px;
-  padding-top: 50px;
+  padding: 50px;
 }
 .restau h2 {
   margin-left: 16px;
 }
-.restau .menu_choice {
+.restau .menu_choices {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px;
-  margin: 10px;
-  padding-bottom: 20px;
+  gap: 20px;
 }
-.restau .menu_choice .img1 {
-  display: flex;
-  flex-direction: column;
-}
-.restau .menu_choice .tag {
-  position: relative;
-}
-.restau .menu_choice .tag::before {
+.restau .menu_choices .tag::before {
   content: "Nouveau";
   position: absolute;
   height: 20px;
@@ -177,41 +211,41 @@ header a {
   right: 10px;
   top: 10px;
 }
-.restau .choice {
+.restau .menu_choices .resto {
+  width: 310px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   box-shadow: 4px 4px 10px -4px black;
   background-color: white;
   position: relative;
 }
-.restau .choice__image {
-  width: 310px;
-}
-.restau .choice__image img {
+.restau .menu_choices .resto img {
   height: 200px;
   width: 309px;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
 }
-.restau .choice__details {
+.restau .menu_choices .resto .choice__details {
   position: relative;
 }
-.restau .choice__details i {
+.restau .menu_choices .resto .choice__details i {
   font-size: 25px;
   position: absolute;
   right: 10px;
   top: 10px;
 }
-.restau .choice__details .fas {
+.restau .menu_choices .resto .choice__details .fas {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: all 1s ease-in-out;
 }
-.restau .choice__details .fas:hover {
+.restau .menu_choices .resto .choice__details:hover .fas {
   cursor: pointer;
   opacity: 1;
+  transform: scale(1.2);
 }
 
 footer {
@@ -241,6 +275,16 @@ footer a {
   color: white;
 }
 
+@keyframes delays {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .picture img {
   display: block;
   width: 100%;
@@ -318,6 +362,17 @@ footer a {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 4px 4px 10px -4px black;
+  animation: delays 1s;
+  animation-fill-mode: both;
+}
+.cards .menu__card:nth-child(3) {
+  animation-delay: 300ms;
+}
+.cards .menu__card:nth-child(4) {
+  animation-delay: 400ms;
+}
+.cards .menu__card:nth-child(5) {
+  animation-delay: 500ms;
 }
 .cards .menu__card .division {
   margin-left: 15px;
@@ -341,9 +396,10 @@ footer a {
   padding: 10px;
 }
 .cards .menu__card .menu-tag {
-  padding: 20px;
+  padding: 17px;
   background-color: #99e2d0;
   margin-right: -60px;
+  width: 60px;
   border-radius: 0px 10px 10px 0px;
   transition: margin-right 0.4s;
 }
@@ -354,7 +410,8 @@ footer a {
   background-color: white;
   color: #99e2d0;
   width: 19px;
-  border-radius: 8px;
+  height: 19px;
+  border-radius: 50%;
 }
 .cards .menu__card:hover {
   cursor: pointer;
@@ -374,13 +431,13 @@ footer a {
   }
 }
 
-section.ordering {
+.ordering {
   height: 25vh;
   text-align: center;
   background-color: #f3f3f3;
   padding: 40px;
 }
-section.ordering button {
+.ordering button {
   background-image: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
   padding: 16px;
@@ -389,10 +446,21 @@ section.ordering button {
   font-size: 16px;
   box-shadow: 4px 4px 10px -4px black;
 }
-section.ordering button:hover {
+.ordering button:hover {
   transform: scale(1.01);
   opacity: 0.9;
   cursor: pointer;
+}
+
+@keyframes delays {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

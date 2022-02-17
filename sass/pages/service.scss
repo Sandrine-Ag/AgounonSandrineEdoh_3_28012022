@@ -75,12 +75,19 @@
         }
     }
     & .menu__card {
+        @for $i from 3 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms*$i;
+            }
+        }
         display: flex;
         margin-bottom: 20px;
         background-color: white;
         border-radius: 10px;
         overflow: hidden;
         @include shadow;
+        animation: delays 1s;
+        animation-fill-mode: both;
         .division {
             margin-left: 15px;
             padding: 10px;
@@ -95,7 +102,6 @@
                 margin-left: -10px;
             }
         }
-
         .menu-price {
             display: flex;
             align-items: flex-end;
@@ -104,9 +110,10 @@
             padding: 10px;
         }
         .menu-tag {
-            padding: 20px;
+            padding: 17px;
             background-color: $final-color;
             margin-right: -60px;
+            width: 60px;
             border-radius: 0px 10px 10px 0px;
             transition: margin-right 0.4s;
             i {
@@ -116,7 +123,8 @@
                 background-color: white;
                 color: $final-color;
                 width: 19px;
-                border-radius: 8px;
+                height: 19px;
+                border-radius: 50%;
             }
         }
         &:hover {
@@ -133,7 +141,7 @@
     }
 }
 
-section.ordering {
+.ordering {
     height: 25vh;
     text-align: center;
     background-color: $secondary-color;
@@ -144,8 +152,8 @@ section.ordering {
             @include button-hover;
         }
     }
-    
-}
+}  
+
 
 
 

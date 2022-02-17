@@ -7,69 +7,60 @@
     }
     background-color: #f6f6f6;
     margin-top: 50px;
-    padding-top: 50px;
-        .menu_choice {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 10px;
-            margin: 10px;
-            padding-bottom: 20px;
-                .img1 {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .tag {
-                    position: relative;
-                }
-                .tag::before {
-                    content: "Nouveau";
-                    position: absolute;
-                    height: 20px;
-                    width: 90px;
-                    font-weight: bold;
-                    color: darken($color: $final-color, $amount: 20%);
-                    background-color: $final-color;
-                    padding: 6px;
-                    text-align: center;
-                    right: 10px;
-                    top: 10px;
-                }
+    padding: 50px;
+    & .menu_choices {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        .tag::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 20px;
+            width: 90px;
+            font-weight: bold;
+            color: darken($color: $final-color, $amount: 20%);
+            background-color: $final-color;
+            padding: 6px;
+            text-align: center;
+            right: 10px;
+            top: 10px;
         }
-        .choice {
+        & .resto {
+            width: 310px;
             border: 1px solid #f3f3f3;
             border-radius: 5px;
             @include shadow;
             background-color: white;
             position: relative;
-            &__image {
-                width: 310px;
-            }
-            &__image img {
+            & img {
                 height: 200px;
                 width: 309px;
                 background-color: white;
                 border-radius: 5px 5px 0px 0px;
             }
-            &__details {
+            .choice__details {
                 position: relative;
-                i {
+                & i {
                     font-size: 25px;
                     position: absolute;
                     right: 10px;
                     top: 10px;
                 }
-                .fas {
+                & .fas {
                     color: transparent;
                     background-image: linear-gradient(#ff79da, #9356dc);
                     background-clip: text;
                     -webkit-background-clip: text;
                     opacity: 0;
-                        &:hover{
-                            cursor: pointer;
-                            opacity: 1;
-                        }
+                    transition: all 1s ease-in-out;
+                }
+                &:hover .fas{
+                    cursor: pointer;
+                    opacity: 1;
+                    transform: scale(1.2);
                 }
             }
-        }           
+        }
+    } 
 }
