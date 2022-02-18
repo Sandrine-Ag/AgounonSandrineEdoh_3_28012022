@@ -10,7 +10,7 @@
 
 @mixin button-hover {
     transform: scale(1.01);
-    opacity: 0.9;
+    opacity: 0.7;
     cursor: pointer;
     
 }
@@ -39,5 +39,28 @@
     a {
         text-decoration: none;
         color: white;
+    }
+}
+
+@mixin heart {
+    & i {
+        font-size: 25px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        
+    }
+    & .fas {
+        color: transparent;
+        background-image: linear-gradient(#ff79da, #9356dc);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+    &:hover .fas{
+        cursor: pointer;
+        opacity: 1;
+        transform: scale(1.2);
     }
 }

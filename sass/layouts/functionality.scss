@@ -21,7 +21,7 @@
         &::before {
             content:counter(numbers);
             counter-increment: numbers;
-            color: white;
+            color: $semi-color;
             background-color: $primary-color;
             padding: 5px;
             margin: -12px;
@@ -38,6 +38,8 @@
         @include shadow;
             &:hover{
                 @include hovering;
+                opacity: 0.7;
+                box-shadow: darken($color: black, $amount: 30%);
             }
             & i .fa, .fas {
                 margin-right: 30px;

@@ -91,8 +91,9 @@ header a {
 }
 .intro button:hover {
   transform: scale(1.01);
-  opacity: 0.9;
+  opacity: 0.7;
   cursor: pointer;
+  box-shadow: 4px 4px 10px -4px black;
 }
 
 .loader {
@@ -106,12 +107,6 @@ header a {
   opacity: 0.9;
   animation: load 1s 2s forwards;
 }
-
-.full-full {
-  display: flex;
-  align-items: center;
-}
-
 .loader::after {
   content: "";
   width: 100px;
@@ -121,6 +116,11 @@ header a {
   border-bottom-color: purple;
   border-radius: 50%;
   animation: spin 1s ease-in-out infinite;
+}
+
+.full-full {
+  display: flex;
+  align-items: center;
 }
 
 @keyframes spin {
@@ -178,6 +178,8 @@ header a {
 }
 .functionality li:hover {
   transform: scale(1.02);
+  opacity: 0.7;
+  box-shadow: black;
 }
 .functionality li i .fa, .functionality li .fas {
   margin-right: 30px;
@@ -228,13 +230,13 @@ header a {
 .restau .menu_choices .resto .choice__details {
   position: relative;
 }
-.restau .menu_choices .resto .choice__details i {
+.restau .menu_choices .resto .choice__details .hearting i {
   font-size: 25px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
 }
-.restau .menu_choices .resto .choice__details .fas {
+.restau .menu_choices .resto .choice__details .hearting .fas {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
@@ -242,7 +244,7 @@ header a {
   opacity: 0;
   transition: all 1s ease-in-out;
 }
-.restau .menu_choices .resto .choice__details:hover .fas {
+.restau .menu_choices .resto .choice__details .hearting:hover .fas {
   cursor: pointer;
   opacity: 1;
   transform: scale(1.2);
@@ -309,8 +311,8 @@ footer a {
 .service h2 i {
   font-size: 25px;
   position: absolute;
-  right: 10px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
 }
 .service h2 .fas {
   color: transparent;
@@ -318,10 +320,12 @@ footer a {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: all 1s ease-in-out;
 }
-.service h2 .fas:hover {
+.service h2:hover .fas {
   cursor: pointer;
   opacity: 1;
+  transform: scale(1.2);
 }
 
 .cards {
@@ -379,13 +383,11 @@ footer a {
   padding: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .cards .menu__card .division h4, .cards .menu__card .division p {
   margin: auto;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   margin-left: -10px;
 }
 .cards .menu__card .menu-price {
@@ -448,7 +450,7 @@ footer a {
 }
 .ordering button:hover {
   transform: scale(1.01);
-  opacity: 0.9;
+  opacity: 0.7;
   cursor: pointer;
 }
 
