@@ -15,13 +15,15 @@
     margin-top: -40px;
     position: relative;
     background-color: $secondary-color;
+    .hearts {
+        @include heart;
+    }
     h2 {
         margin: 0px;
         font-family: "Shrikhand", cursive;
         padding: 30px 16px;
         border-radius: 40px 40px 0px 0px;
         background-color: $secondary-color; 
-        @include heart;
     }
 }
 .cards {
@@ -36,7 +38,9 @@
         flex-direction: column;
     }
     & > * {
-        flex-grow: 1;
+        @media (min-width: 987px) {
+            width: 33%;
+        }
         h3 {
             position: relative;
             text-transform: uppercase;
@@ -92,17 +96,17 @@
             width: 60px;
             border-radius: 0px 10px 10px 0px;
             transition: margin-right 0.4s;
-            i {
-                font-weight: 600;
-                display: flex;
-                align-items: center;
-                background-color: $semi-color;
-                color: $final-color;
-                width: 19px;
-                height: 19px;
-                border-radius: 50%;
-            }
+        i {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            background-color: $semi-color;
+            color: $final-color;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
         }
+    }
         &:hover {
             cursor: pointer;
             .menu-tag {
@@ -126,8 +130,4 @@
             @include button-hover;
         }
     }
-}  
-
-
-
-
+}

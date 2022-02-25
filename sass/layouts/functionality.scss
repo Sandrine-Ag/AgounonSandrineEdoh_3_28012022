@@ -38,7 +38,8 @@
         @include shadow;
             &:hover{
                 @include hovering;
-                opacity: 0.7;
+                opacity: 0.8;
+                background-color: $semi-color;
                 box-shadow: darken($color: black, $amount: 30%);
             }
             & i .fa, .fas {
